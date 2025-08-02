@@ -8,7 +8,7 @@
 
 Este proyecto tiene como objetivo realizar un registro automatizado de datos climatológicos en la ciudad de *Detroit* utilizando el API gratuito de OpenWeather.
 
-Se desarrolló un script (en Python o Java) que consulta los datos actuales del clima y los almacena en un archivo CSV. La recolección se realiza periódicamente cada 15 minutos utilizando *crontab* en un entorno Linux/WSL.
+Se desarrolló un script en Python que consulta los datos actuales del clima y los almacena en un archivo CSV. La recolección se realiza periódicamente cada 15 minutos utilizando *crontab* en un entorno Linux/WSL.
 
 #+BEGIN_QUOTE
 Aquí irá una explicación técnica del script y cómo se consulta el API.
@@ -52,7 +52,6 @@ Aquí irá una explicación técnica del script y cómo se consulta el API.
 
 * Conclusiones
 
-#+BEGIN_QUOTE
 El desarrollo de este proyecto permitió aplicar diversos conocimientos de programación, automatización y publicación web en un entorno real y práctico. A continuación, se detallan algunas de las conclusiones más relevantes:
 
 1. **Integración de servicios externos:** El uso del API de OpenWeather mostró la importancia de comprender cómo funcionan los servicios REST y cómo interactuar con ellos mediante scripts en Python o Java.
@@ -66,9 +65,9 @@ El desarrollo de este proyecto permitió aplicar diversos conocimientos de progr
 5. **Importancia del respaldo y documentación:** Mantener el código fuente en GitHub y documentar cada paso fue clave para mantener la trazabilidad del proyecto y facilitar su revisión.
 
 Se recomienda, para futuros desarrollos, implementar mecanismos de validación de datos climáticos y generar visualizaciones automáticas (gráficas) que permitan una comprensión más rápida del comportamiento climático registrado.
-#+END_QUOTE
 
 * Créditos y Licencia
 
 Desarrollado por los futuros ingenieros Andres Alban y Andy Cabrera del curso de Arquitectura de computadoras en la facultad de Sistemas de la Escula politecnica nacional 
+
 
