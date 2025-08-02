@@ -1,0 +1,77 @@
+#+TITLE: Clima en Detroit - Registro Automatizado
+#+AUTHOR: [Tu Nombre]
+#+DATE: 2025-08-02
+#+OPTIONS: toc:nil num:nil
+#+HTML_HEAD: <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css" />
+
+* Descripción del Proyecto
+
+Este proyecto tiene como objetivo realizar un registro automatizado de datos climatológicos en la ciudad de *Detroit* utilizando el API gratuito de OpenWeather.
+
+Se desarrolló un script (en Python o Java) que consulta los datos actuales del clima y los almacena en un archivo CSV. La recolección se realiza periódicamente cada 15 minutos utilizando *crontab* en un entorno Linux/WSL.
+
+#+BEGIN_QUOTE
+Aquí irá una explicación técnica del script y cómo se consulta el API.
+#+END_QUOTE
+
+* Estructura del Proyecto
+
+- Script de adquisición de datos: =main.py= 
+- Script ejecutable: =get-weather.sh=
+- Registro de datos: =clima-detroit-hoy.csv=
+- Log de ejecución: =output.log=
+- Sitio web estático: esta carpeta =weather-site=
+
+#+BEGIN_QUOTE
+### Aquí puedes agregar explicaciones técnicas sobre el uso de crontab, bash y cómo se integran con el script. ###
+#+END_QUOTE
+
+* Visualización de Datos
+
+#+BEGIN_QUOTE
+### Aquí podrás mostrar ejemplos del CSV obtenido, gráficas o una tabla con datos significativos. ###
+#+END_QUOTE
+
+* Enlaces Consultados
+
+- [[https://openweathermap.org/api][Documentación oficial de OpenWeather API]]
+- [[https://www.gnu.org/software/emacs/manual/html_node/emacs/HTML-Export.html][Exportar HTML con Emacs]]
+- [[https://github.com/LeninGF/EPN-Lectures/tree/main/iccd332ArqComp-2024-B/Proyectos/CityWeather][Repositorio de guía de proyecto CityWeather]]
+- [[https://man7.org/linux/man-pages/man5/crontab.5.html][Crontab Manual Page]]
+- [[https://realpython.com/python-requests/][Guía Requests en Python (RealPython)]]
+
+#+BEGIN_QUOTE
+### Puedes agregar aquí los enlaces de cualquier página, tutorial o artículo que consultes mientras haces el proyecto. ###
+#+END_QUOTE
+
+* Código Fuente y Comentarios
+
+#+BEGIN_QUOTE
+### Aquí se incluirán fragmentos del código usado con comentarios explicativos. ###
+#+END_QUOTE
+
+* Conclusiones
+
+#+BEGIN_QUOTE
+* Conclusiones
+
+El desarrollo de este proyecto permitió aplicar diversos conocimientos de programación, automatización y publicación web en un entorno real y práctico. A continuación, se detallan algunas de las conclusiones más relevantes:
+
+1. **Integración de servicios externos:** El uso del API de OpenWeather mostró la importancia de comprender cómo funcionan los servicios REST y cómo interactuar con ellos mediante scripts en Python o Java.
+
+2. **Automatización en sistemas Linux:** La configuración de tareas programadas con *crontab* resultó ser una herramienta poderosa para la recolección periódica de datos sin intervención manual, lo cual simula el comportamiento de sistemas de monitoreo en tiempo real.
+
+3. **Manejo de datos climáticos:** El trabajo con datos estructurados como JSON y su posterior conversión a CSV permitió profundizar en técnicas de procesamiento de información y persistencia en archivos.
+
+4. **Publicación web con herramientas no convencionales:** El uso de Emacs, `org-mode` y `simple-httpd` para la creación de un sitio web estático ofreció una alternativa interesante a los editores tradicionales, reforzando la idea de que muchas herramientas potentes ya están disponibles en el ecosistema GNU/Linux.
+
+5. **Importancia del respaldo y documentación:** Mantener el código fuente en GitHub y documentar cada paso fue clave para mantener la trazabilidad del proyecto y facilitar su revisión.
+
+Se recomienda, para futuros desarrollos, implementar mecanismos de validación de datos climáticos y generar visualizaciones automáticas (gráficas) que permitan una comprensión más rápida del comportamiento climático registrado.
+
+#+END_QUOTE
+
+* Créditos y Licencia
+
+Este sitio web fue desarrollado por estudiantes del curso ICCD332 - Arquitectura de Computadores, Escuela Politécnica Nacional. El código fuente está disponible en GitHub y es de uso académico.
+
