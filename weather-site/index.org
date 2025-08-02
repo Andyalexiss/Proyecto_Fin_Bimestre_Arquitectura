@@ -5,6 +5,7 @@
 #+HTML_HEAD: <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css" />
 
 * Descripción del Proyecto
+Este proyecto tiene como finalidad simular un sistema de monitoreo ambiental que permita recolectar, registrar y presentar información climática de manera automatizada y continua. A través del uso de herramientas de programación, automatización en sistemas Linux y tecnologías web ligeras, se busca crear una solución sencilla, funcional y documentada que represente una aplicación real del desarrollo de software para la captura y análisis de datos externos.
 
 Este proyecto tiene como objetivo realizar un registro automatizado de datos climatológicos en la ciudad de *Detroit* utilizando el API gratuito de OpenWeather.
 
@@ -41,7 +42,7 @@ Aquí irá una explicación técnica del script y cómo se consulta el API.
 - [[https://realpython.com/python-requests/][Guía Requests en Python (RealPython)]]
 
 #+BEGIN_QUOTE
-### Puedes agregar aquí los enlaces de cualquier página, tutorial o artículo que consultes mientras haces el proyecto. ###
+### Puedes agregar aquí mas enlaces de cualquier página, tutorial o artículo que consultes del proyecto como extras. ###
 #+END_QUOTE
 
 * Código Fuente y Comentarios
@@ -69,5 +70,6 @@ Se recomienda, para futuros desarrollos, implementar mecanismos de validación d
 * Créditos y Licencia
 
 Desarrollado por los futuros ingenieros Andres Alban y Andy Cabrera del curso de Arquitectura de computadoras en la facultad de Sistemas de la Escula politecnica nacional 
+
 
 
