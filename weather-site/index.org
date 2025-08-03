@@ -190,17 +190,17 @@ El redireccionamiento de salida `>> output.log 2>&1` es crucial:
 ** 6.2 Gráfica: Temperatura vs Tiempo
 
 #+CAPTION: Temperatura vs Tiempo
-[[./public/images/temperature.png]]
+[[./images/temperature.png]]
 
 ** 6.3 Gráfica: Humedad vs Tiempo
 
 #+CAPTION: Humedad vs Tiempo
-[[./public/images/humidity.png]]
+[[./images/humidity.png]]
 
 ** 6.4 Grafica Frecuencia Descripción Clima
 
 #+CAPTION: Frecuencia Descripción Clima
-[[./public/images/optional_plot.png]]
+[[./images/optional_plot.png]]
 
 * 7. Conclusiones
 
