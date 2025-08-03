@@ -1864,3 +1864,203 @@ pandas.errors.EmptyDataError: No columns to parse from file
 [2025-08-02 15:05:06] Gráfica de humedad guardada en weather-site/content/images/humidity.png
 [2025-08-02 15:05:06] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
 [2025-08-02 15:05:06] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
+[2025-08-02 15:11:51] Obteniendo datos del clima para Detroit...
+[2025-08-02 15:11:52] Datos añadidos a 'clima-detroit-hoy.csv'. Filas totales: 142
+[2025-08-02 15:11:52] Gráfica de temperatura guardada en weather-site/content/images/temperature.png
+[2025-08-02 15:11:52] Gráfica de humedad guardada en weather-site/content/images/humidity.png
+[2025-08-02 15:11:52] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
+[2025-08-02 15:14:56] Obteniendo datos del clima para Detroit...
+[2025-08-02 15:14:56] Datos añadidos a 'clima-detroit-hoy.csv'. Filas totales: 143
+[2025-08-02 15:14:57] Gráfica de temperatura guardada en weather-site/content/images/temperature.png
+[2025-08-02 15:14:57] Gráfica de humedad guardada en weather-site/content/images/humidity.png
+[2025-08-02 15:14:57] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
+[2025-08-02 15:29:57] Obteniendo datos del clima para Detroit...
+[2025-08-02 15:29:58] Datos añadidos a 'clima-detroit-hoy.csv'. Filas totales: 144
+[2025-08-02 15:29:58] Gráfica de temperatura guardada en weather-site/content/images/temperature.png
+[2025-08-02 15:29:58] Gráfica de humedad guardada en weather-site/content/images/humidity.png
+[2025-08-02 15:29:58] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
+[2025-08-02 15:44:59] Obteniendo datos del clima para Detroit...
+[2025-08-02 15:44:59] Datos añadidos a 'clima-detroit-hoy.csv'. Filas totales: 145
+[2025-08-02 15:44:59] Gráfica de temperatura guardada en weather-site/content/images/temperature.png
+[2025-08-02 15:44:59] Gráfica de humedad guardada en weather-site/content/images/humidity.png
+[2025-08-02 15:44:59] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
+[2025-08-02 16:00:00] Obteniendo datos del clima para Detroit...
+[2025-08-02 16:00:00] Datos añadidos a 'clima-detroit-hoy.csv'. Filas totales: 146
+[2025-08-02 16:00:00] Gráfica de temperatura guardada en weather-site/content/images/temperature.png
+[2025-08-02 16:00:00] Gráfica de humedad guardada en weather-site/content/images/humidity.png
+[2025-08-02 16:00:01] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
+[2025-08-02 16:15:01] Obteniendo datos del clima para Detroit...
+[2025-08-02 16:15:01] Datos añadidos a 'clima-detroit-hoy.csv'. Filas totales: 147
+[2025-08-02 16:15:02] Gráfica de temperatura guardada en weather-site/content/images/temperature.png
+[2025-08-02 16:15:02] Gráfica de humedad guardada en weather-site/content/images/humidity.png
+[2025-08-02 16:15:02] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
+[2025-08-02 16:38:29] Obteniendo datos del clima para Detroit...
+[2025-08-02 16:38:29] Datos añadidos a 'clima-detroit-hoy.csv'. Filas totales: 148
+[2025-08-02 16:38:29] Gráfica de temperatura guardada en weather-site/content/images/temperature.png
+[2025-08-02 16:38:30] Gráfica de humedad guardada en weather-site/content/images/humidity.png
+[2025-08-02 16:38:30] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
+[2025-08-02 16:53:30] Obteniendo datos del clima para Detroit...
+[2025-08-02 16:53:31] Datos añadidos a 'clima-detroit-hoy.csv'. Filas totales: 149
+[2025-08-02 16:53:31] Gráfica de temperatura guardada en weather-site/content/images/temperature.png
+[2025-08-02 16:53:31] Gráfica de humedad guardada en weather-site/content/images/humidity.png
+[2025-08-02 16:53:31] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
+[2025-08-02 17:08:32] Obteniendo datos del clima para Detroit...
+[2025-08-02 17:08:32] Datos añadidos a 'clima-detroit-hoy.csv'. Filas totales: 150
+[2025-08-02 17:08:32] Gráfica de temperatura guardada en weather-site/content/images/temperature.png
+[2025-08-02 17:08:32] Gráfica de humedad guardada en weather-site/content/images/humidity.png
+[2025-08-02 17:08:32] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
+[2025-08-02 17:23:33] Obteniendo datos del clima para Detroit...
+[2025-08-02 17:23:33] Datos añadidos a 'clima-detroit-hoy.csv'. Filas totales: 151
+[2025-08-02 17:23:33] Gráfica de temperatura guardada en weather-site/content/images/temperature.png
+[2025-08-02 17:23:33] Gráfica de humedad guardada en weather-site/content/images/humidity.png
+[2025-08-02 17:23:33] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
+[2025-08-02 17:38:34] Obteniendo datos del clima para Detroit...
+[2025-08-02 17:38:34] Datos añadidos a 'clima-detroit-hoy.csv'. Filas totales: 152
+[2025-08-02 17:38:34] Gráfica de temperatura guardada en weather-site/content/images/temperature.png
+[2025-08-02 17:38:35] Gráfica de humedad guardada en weather-site/content/images/humidity.png
+[2025-08-02 17:38:35] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
+[2025-08-02 17:53:35] Obteniendo datos del clima para Detroit...
+[2025-08-02 17:53:36] Datos añadidos a 'clima-detroit-hoy.csv'. Filas totales: 153
+[2025-08-02 17:53:36] Gráfica de temperatura guardada en weather-site/content/images/temperature.png
+[2025-08-02 17:53:36] Gráfica de humedad guardada en weather-site/content/images/humidity.png
+[2025-08-02 17:53:36] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
+[2025-08-02 18:08:37] Obteniendo datos del clima para Detroit...
+[2025-08-02 18:08:37] Datos añadidos a 'clima-detroit-hoy.csv'. Filas totales: 154
+[2025-08-02 18:08:37] Gráfica de temperatura guardada en weather-site/content/images/temperature.png
+[2025-08-02 18:08:37] Gráfica de humedad guardada en weather-site/content/images/humidity.png
+[2025-08-02 18:08:37] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
+[2025-08-02 19:03:02] Obteniendo datos del clima para Detroit...
+[2025-08-02 19:03:02] Datos añadidos a 'clima-detroit-hoy.csv'. Filas totales: 155
+[2025-08-02 19:03:02] Gráfica de temperatura guardada en weather-site/content/images/temperature.png
+[2025-08-02 19:03:02] Gráfica de humedad guardada en weather-site/content/images/humidity.png
+[2025-08-02 19:03:02] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
+[2025-08-02 19:18:03] Obteniendo datos del clima para Detroit...
+[2025-08-02 19:18:03] Datos añadidos a 'clima-detroit-hoy.csv'. Filas totales: 156
+[2025-08-02 19:18:03] Gráfica de temperatura guardada en weather-site/content/images/temperature.png
+[2025-08-02 19:18:03] Gráfica de humedad guardada en weather-site/content/images/humidity.png
+[2025-08-02 19:18:03] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
+[2025-08-02 19:33:04] Obteniendo datos del clima para Detroit...
+[2025-08-02 19:33:04] Datos añadidos a 'clima-detroit-hoy.csv'. Filas totales: 157
+[2025-08-02 19:33:04] Gráfica de temperatura guardada en weather-site/content/images/temperature.png
+[2025-08-02 19:33:04] Gráfica de humedad guardada en weather-site/content/images/humidity.png
+[2025-08-02 19:33:04] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
+[2025-08-02 19:48:05] Obteniendo datos del clima para Detroit...
+[2025-08-02 19:48:05] Datos añadidos a 'clima-detroit-hoy.csv'. Filas totales: 158
+[2025-08-02 19:48:06] Gráfica de temperatura guardada en weather-site/content/images/temperature.png
+[2025-08-02 19:48:06] Gráfica de humedad guardada en weather-site/content/images/humidity.png
+[2025-08-02 19:48:06] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
+[2025-08-02 20:03:06] Obteniendo datos del clima para Detroit...
+[2025-08-02 20:03:07] Datos añadidos a 'clima-detroit-hoy.csv'. Filas totales: 159
+[2025-08-02 20:03:07] Gráfica de temperatura guardada en weather-site/content/images/temperature.png
+[2025-08-02 20:03:07] Gráfica de humedad guardada en weather-site/content/images/humidity.png
+[2025-08-02 20:03:07] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
+[2025-08-02 20:18:08] Obteniendo datos del clima para Detroit...
+[2025-08-02 20:18:08] Datos añadidos a 'clima-detroit-hoy.csv'. Filas totales: 160
+[2025-08-02 20:18:08] Gráfica de temperatura guardada en weather-site/content/images/temperature.png
+[2025-08-02 20:18:08] Gráfica de humedad guardada en weather-site/content/images/humidity.png
+[2025-08-02 20:18:08] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
+[2025-08-02 20:33:09] Obteniendo datos del clima para Detroit...
+[2025-08-02 20:33:09] Datos añadidos a 'clima-detroit-hoy.csv'. Filas totales: 161
+[2025-08-02 20:33:09] Gráfica de temperatura guardada en weather-site/content/images/temperature.png
+[2025-08-02 20:33:09] Gráfica de humedad guardada en weather-site/content/images/humidity.png
+[2025-08-02 20:33:10] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
+[2025-08-02 20:48:10] Obteniendo datos del clima para Detroit...
+[2025-08-02 20:48:10] Datos añadidos a 'clima-detroit-hoy.csv'. Filas totales: 162
+[2025-08-02 20:48:11] Gráfica de temperatura guardada en weather-site/content/images/temperature.png
+[2025-08-02 20:48:11] Gráfica de humedad guardada en weather-site/content/images/humidity.png
+[2025-08-02 20:48:11] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
+[2025-08-02 21:03:11] Obteniendo datos del clima para Detroit...
+[2025-08-02 21:03:12] Datos añadidos a 'clima-detroit-hoy.csv'. Filas totales: 163
+[2025-08-02 21:03:12] Gráfica de temperatura guardada en weather-site/content/images/temperature.png
+[2025-08-02 21:03:12] Gráfica de humedad guardada en weather-site/content/images/humidity.png
+[2025-08-02 21:03:12] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
+[2025-08-02 21:18:13] Obteniendo datos del clima para Detroit...
+[2025-08-02 21:18:13] Datos añadidos a 'clima-detroit-hoy.csv'. Filas totales: 164
+[2025-08-02 21:18:13] Gráfica de temperatura guardada en weather-site/content/images/temperature.png
+[2025-08-02 21:18:13] Gráfica de humedad guardada en weather-site/content/images/humidity.png
+[2025-08-02 21:18:13] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
+[2025-08-02 21:33:14] Obteniendo datos del clima para Detroit...
+[2025-08-02 21:33:14] Datos añadidos a 'clima-detroit-hoy.csv'. Filas totales: 165
+[2025-08-02 21:33:14] Gráfica de temperatura guardada en weather-site/content/images/temperature.png
+[2025-08-02 21:33:14] Gráfica de humedad guardada en weather-site/content/images/humidity.png
+[2025-08-02 21:33:15] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
+[2025-08-02 21:48:15] Obteniendo datos del clima para Detroit...
+[2025-08-02 21:48:16] Datos añadidos a 'clima-detroit-hoy.csv'. Filas totales: 166
+[2025-08-02 21:48:16] Gráfica de temperatura guardada en weather-site/content/images/temperature.png
+[2025-08-02 21:48:16] Gráfica de humedad guardada en weather-site/content/images/humidity.png
+[2025-08-02 21:48:16] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
+[2025-08-02 22:03:18] Obteniendo datos del clima para Detroit...
+[2025-08-02 22:03:18] Datos añadidos a 'clima-detroit-hoy.csv'. Filas totales: 167
+[2025-08-02 22:03:19] Gráfica de temperatura guardada en weather-site/content/images/temperature.png
+[2025-08-02 22:03:19] Gráfica de humedad guardada en weather-site/content/images/humidity.png
+[2025-08-02 22:03:19] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
+[2025-08-02 22:18:21] Obteniendo datos del clima para Detroit...
+[2025-08-02 22:18:21] Datos añadidos a 'clima-detroit-hoy.csv'. Filas totales: 168
+[2025-08-02 22:18:21] Gráfica de temperatura guardada en weather-site/content/images/temperature.png
+[2025-08-02 22:18:21] Gráfica de humedad guardada en weather-site/content/images/humidity.png
+[2025-08-02 22:18:21] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
+[2025-08-02 22:33:23] Obteniendo datos del clima para Detroit...
+[2025-08-02 22:33:23] Datos añadidos a 'clima-detroit-hoy.csv'. Filas totales: 169
+[2025-08-02 22:33:23] Gráfica de temperatura guardada en weather-site/content/images/temperature.png
+[2025-08-02 22:33:23] Gráfica de humedad guardada en weather-site/content/images/humidity.png
+[2025-08-02 22:33:23] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
+[2025-08-02 22:48:25] Obteniendo datos del clima para Detroit...
+[2025-08-02 22:48:25] Datos añadidos a 'clima-detroit-hoy.csv'. Filas totales: 170
+[2025-08-02 22:48:26] Gráfica de temperatura guardada en weather-site/content/images/temperature.png
+[2025-08-02 22:48:26] Gráfica de humedad guardada en weather-site/content/images/humidity.png
+[2025-08-02 22:48:26] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
+[2025-08-02 23:03:27] Obteniendo datos del clima para Detroit...
+[2025-08-02 23:03:27] Datos añadidos a 'clima-detroit-hoy.csv'. Filas totales: 171
+[2025-08-02 23:03:28] Gráfica de temperatura guardada en weather-site/content/images/temperature.png
+[2025-08-02 23:03:28] Gráfica de humedad guardada en weather-site/content/images/humidity.png
+[2025-08-02 23:03:28] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
+[2025-08-02 23:18:29] Obteniendo datos del clima para Detroit...
+[2025-08-02 23:18:30] Datos añadidos a 'clima-detroit-hoy.csv'. Filas totales: 172
+[2025-08-02 23:18:30] Gráfica de temperatura guardada en weather-site/content/images/temperature.png
+[2025-08-02 23:18:30] Gráfica de humedad guardada en weather-site/content/images/humidity.png
+[2025-08-02 23:18:30] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
+[2025-08-02 23:33:32] Obteniendo datos del clima para Detroit...
+[2025-08-02 23:33:32] Datos añadidos a 'clima-detroit-hoy.csv'. Filas totales: 173
+[2025-08-02 23:33:32] Gráfica de temperatura guardada en weather-site/content/images/temperature.png
+[2025-08-02 23:33:33] Gráfica de humedad guardada en weather-site/content/images/humidity.png
+[2025-08-02 23:33:33] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
+[2025-08-02 23:48:34] Obteniendo datos del clima para Detroit...
+[2025-08-02 23:48:34] Datos añadidos a 'clima-detroit-hoy.csv'. Filas totales: 174
+[2025-08-02 23:48:35] Gráfica de temperatura guardada en weather-site/content/images/temperature.png
+[2025-08-02 23:48:35] Gráfica de humedad guardada en weather-site/content/images/humidity.png
+[2025-08-02 23:48:35] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
+[2025-08-03 00:03:36] Obteniendo datos del clima para Detroit...
+[2025-08-03 00:03:37] Datos añadidos a 'clima-detroit-hoy.csv'. Filas totales: 175
+[2025-08-03 00:03:37] Gráfica de temperatura guardada en weather-site/content/images/temperature.png
+[2025-08-03 00:03:37] Gráfica de humedad guardada en weather-site/content/images/humidity.png
+[2025-08-03 00:03:37] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
+[2025-08-03 00:18:38] Obteniendo datos del clima para Detroit...
+[2025-08-03 00:18:38] Datos añadidos a 'clima-detroit-hoy.csv'. Filas totales: 176
+[2025-08-03 00:18:38] Gráfica de temperatura guardada en weather-site/content/images/temperature.png
+[2025-08-03 00:18:39] Gráfica de humedad guardada en weather-site/content/images/humidity.png
+[2025-08-03 00:18:39] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
+[2025-08-03 00:33:39] Obteniendo datos del clima para Detroit...
+[2025-08-03 00:33:40] Datos añadidos a 'clima-detroit-hoy.csv'. Filas totales: 177
+[2025-08-03 00:33:40] Gráfica de temperatura guardada en weather-site/content/images/temperature.png
+[2025-08-03 00:33:40] Gráfica de humedad guardada en weather-site/content/images/humidity.png
+[2025-08-03 00:33:40] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
+[2025-08-03 00:48:41] Obteniendo datos del clima para Detroit...
+[2025-08-03 00:48:42] Datos añadidos a 'clima-detroit-hoy.csv'. Filas totales: 178
+[2025-08-03 00:48:42] Gráfica de temperatura guardada en weather-site/content/images/temperature.png
+[2025-08-03 00:48:42] Gráfica de humedad guardada en weather-site/content/images/humidity.png
+[2025-08-03 00:48:42] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
+[2025-08-03 01:03:43] Obteniendo datos del clima para Detroit...
+[2025-08-03 01:03:43] Datos añadidos a 'clima-detroit-hoy.csv'. Filas totales: 179
+[2025-08-03 01:03:44] Gráfica de temperatura guardada en weather-site/content/images/temperature.png
+[2025-08-03 01:03:44] Gráfica de humedad guardada en weather-site/content/images/humidity.png
+[2025-08-03 01:03:44] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
+[2025-08-03 01:18:45] Obteniendo datos del clima para Detroit...
+[2025-08-03 01:18:45] Datos añadidos a 'clima-detroit-hoy.csv'. Filas totales: 180
+[2025-08-03 01:18:45] Gráfica de temperatura guardada en weather-site/content/images/temperature.png
+[2025-08-03 01:18:46] Gráfica de humedad guardada en weather-site/content/images/humidity.png
+[2025-08-03 01:18:46] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png
+[2025-08-03 01:33:47] Obteniendo datos del clima para Detroit...
+[2025-08-03 01:33:47] Datos añadidos a 'clima-detroit-hoy.csv'. Filas totales: 181
+[2025-08-03 01:33:47] Gráfica de temperatura guardada en weather-site/content/images/temperature.png
+[2025-08-03 01:33:47] Gráfica de humedad guardada en weather-site/content/images/humidity.png
+[2025-08-03 01:33:47] Gráfica de frecuencia de descripciones guardada en weather-site/content/images/optional_plot.png

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-08-03 Sun 03:00 -->
+<!-- 2025-08-03 Sun 03:10 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Clima en Detroit - Registro Automatizado</title>
@@ -199,9 +199,9 @@
 <div id="content" class="content">
 <h1 class="title">Clima en Detroit - Registro Automatizado</h1>
 
-<div id="outline-container-org3a31e4d" class="outline-2">
-<h2 id="org3a31e4d">Descripción del Proyecto</h2>
-<div class="outline-text-2" id="text-org3a31e4d">
+<div id="outline-container-org027fa26" class="outline-2">
+<h2 id="org027fa26">Descripción del Proyecto</h2>
+<div class="outline-text-2" id="text-org027fa26">
 <p>
 Este proyecto tiene como finalidad simular un sistema de monitoreo ambiental que permita recolectar, registrar y presentar información climática de manera automatizada y continua. A través del uso de herramientas de programación, automatización en sistemas Linux y tecnologías web ligeras, se busca crear una solución sencilla, funcional y documentada que represente una aplicación real del desarrollo de software para la captura y análisis de datos externos.
 </p>
@@ -222,9 +222,9 @@ Se desarrolló un script en Python que consulta los datos actuales del clima y l
 </div>
 </div>
 
-<div id="outline-container-org8121c8c" class="outline-2">
-<h2 id="org8121c8c">1. Formulación del Problema</h2>
-<div class="outline-text-2" id="text-org8121c8c">
+<div id="outline-container-orgee7bb8a" class="outline-2">
+<h2 id="orgee7bb8a">1. Formulación del Problema</h2>
+<div class="outline-text-2" id="text-orgee7bb8a">
 <p>
 Se desea realizar un registro climatológico de la ciudad de <b>Detroit</b> utilizando el API de OpenWeather. El sistema debe capturar datos cada 15 minutos y almacenarlos en un archivo CSV, de forma acumulativa.
 </p>
@@ -241,32 +241,32 @@ Además, se utilizará un script `sh` llamado `get-weather.sh` para automatizar 
 </div>
 </div>
 
-<div id="outline-container-org5d05f2c" class="outline-2">
-<h2 id="org5d05f2c">2. Estructura del Proyecto</h2>
-<div class="outline-text-2" id="text-org5d05f2c">
+<div id="outline-container-org50d19cc" class="outline-2">
+<h2 id="org50d19cc">2. Estructura del Proyecto</h2>
+<div class="outline-text-2" id="text-org50d19cc">
 <div class="org-src-container">
 <pre class="src src-shell">tree
-├── CityTemperatureAnalysis.ipynb
-├── clima-detroit-hoy.csv
-├── get-weather.sh
-├── main.py
-├── output.log
-└── weather-site
-    ├── build-site.el
-    ├── build.sh
-    ├── content
-    │   └── images
-    │       ├── humidity.png
-    │       ├── optional_plot.png
-    │       └── temperature.png
-    ├── index.org
-    ├── index.org_archive
-    └── public
-        ├── images
-        │   ├── humidity.png
-        │   ├── optional_plot.png
-        │   └── temperature.png
-        └── index.html
+&#9500;&#9472;&#9472; CityTemperatureAnalysis.ipynb
+&#9500;&#9472;&#9472; clima-detroit-hoy.csv
+&#9500;&#9472;&#9472; get-weather.sh
+&#9500;&#9472;&#9472; main.py
+&#9500;&#9472;&#9472; output.log
+&#9492;&#9472;&#9472; weather-site
+    &#9500;&#9472;&#9472; build-site.el
+    &#9500;&#9472;&#9472; build.sh
+    &#9500;&#9472;&#9472; content
+    &#9474;&#160;&#160; &#9492;&#9472;&#9472; images
+    &#9474;&#160;&#160;     &#9500;&#9472;&#9472; humidity.png
+    &#9474;&#160;&#160;     &#9500;&#9472;&#9472; optional_plot.png
+    &#9474;&#160;&#160;     &#9492;&#9472;&#9472; temperature.png
+    &#9500;&#9472;&#9472; index.org
+    &#9500;&#9472;&#9472; index.org_archive
+    &#9492;&#9472;&#9472; public
+        &#9500;&#9472;&#9472; images
+        &#9474;&#160;&#160; &#9500;&#9472;&#9472; humidity.png
+        &#9474;&#160;&#160; &#9500;&#9472;&#9472; optional_plot.png
+        &#9474;&#160;&#160; &#9492;&#9472;&#9472; temperature.png
+        &#9492;&#9472;&#9472; index.html
 </pre>
 </div>
 
@@ -278,114 +278,114 @@ La estructura de carpetas se organiza para separar la lógica de la recolección
 </div>
 </div>
 
-<div id="outline-container-org4dc1395" class="outline-2">
-<h2 id="org4dc1395">3. Descripción del Código</h2>
-<div class="outline-text-2" id="text-org4dc1395">
+<div id="outline-container-org0ede75e" class="outline-2">
+<h2 id="org0ede75e">3. Descripción del Código</h2>
+<div class="outline-text-2" id="text-org0ede75e">
 </div>
-<div id="outline-container-orge05cb15" class="outline-3">
-<h3 id="orge05cb15">3.1 Lectura del API</h3>
-<div class="outline-text-3" id="text-orge05cb15">
+<div id="outline-container-orgcd15440" class="outline-3">
+<h3 id="orgcd15440">3.1 Lectura del API</h3>
+<div class="outline-text-3" id="text-orgcd15440">
 <div class="org-src-container">
-<pre class="src src-python">def get_weather_data(city, api_key, units):
-    """Obtiene los datos del clima de la API de OpenWeatherMap."""
-    try:
-        logging.info(f"Obteniendo datos del clima para {city}...")
-        params = {
-            'q': city,
-            'appid': api_key,
-            'units': units
-        }
-        response = requests.get(BASE_URL, params=params)
-        response.raise_for_status() # Lanza un error para códigos de estado HTTP 4xx/5xx
-        data = response.json()
-        return data
-    except requests.exceptions.RequestException as e:
-        logging.error(f"Error al conectar con la API: {e}")
-        return None
-    except KeyError as e:
-        logging.error(f"Error al procesar los datos de la API. Falta la clave: {e}")
-        logging.error(f"Respuesta completa: {response.text}")
-        return None
+<pre class="src src-python"><span style="color: #a020f0;">def</span> <span style="color: #0000ff;">get_weather_data</span>(city, api_key, units):
+&#160; &#160; <span style="color: #8b2252;">"""Obtiene los datos del clima de la API de OpenWeatherMap."""</span>
+&#160; &#160; <span style="color: #a020f0;">try</span>:
+&#160; &#160; &#160; &#160; logging.info(f<span style="color: #8b2252;">"Obteniendo datos del clima para </span>{city}<span style="color: #8b2252;">..."</span>)
+&#160; &#160; &#160; &#160; <span style="color: #a0522d;">params</span> = {
+&#160; &#160; &#160; &#160; &#160; &#160; <span style="color: #8b2252;">'q'</span>: city,
+&#160; &#160; &#160; &#160; &#160; &#160; <span style="color: #8b2252;">'appid'</span>: api_key,
+&#160; &#160; &#160; &#160; &#160; &#160; <span style="color: #8b2252;">'units'</span>: units
+&#160; &#160; &#160; &#160; }
+&#160; &#160; &#160; &#160; <span style="color: #a0522d;">response</span> = requests.get(BASE_URL, params=params)
+&#160; &#160; &#160; &#160; response.raise_for_status() <span style="color: #b22222;"># </span><span style="color: #b22222;">Lanza un error para c&#243;digos de estado HTTP 4xx/5xx
+</span>&#160; &#160; &#160; &#160; <span style="color: #a0522d;">data</span> = response.json()
+&#160; &#160; &#160; &#160; <span style="color: #a020f0;">return</span> data
+&#160; &#160; <span style="color: #a020f0;">except</span> requests.exceptions.RequestException <span style="color: #a020f0;">as</span> e:
+&#160; &#160; &#160; &#160; logging.error(f<span style="color: #8b2252;">"Error al conectar con la API: </span>{e}<span style="color: #8b2252;">"</span>)
+&#160; &#160; &#160; &#160; <span style="color: #a020f0;">return</span> <span style="color: #008b8b;">None</span>
+&#160; &#160; <span style="color: #a020f0;">except</span> <span style="color: #228b22;">KeyError</span> <span style="color: #a020f0;">as</span> e:
+&#160; &#160; &#160; &#160; logging.error(f<span style="color: #8b2252;">"Error al procesar los datos de la API. Falta la clave: </span>{e}<span style="color: #8b2252;">"</span>)
+&#160; &#160; &#160; &#160; logging.error(f<span style="color: #8b2252;">"Respuesta completa: </span>{response.text}<span style="color: #8b2252;">"</span>)
+&#160; &#160; &#160; &#160; <span style="color: #a020f0;">return</span> <span style="color: #008b8b;">None</span>
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org014e81a" class="outline-3">
-<h3 id="org014e81a">3.2 Conversión de JSON a diccionario</h3>
-<div class="outline-text-3" id="text-org014e81a">
+<div id="outline-container-orgbe3b019" class="outline-3">
+<h3 id="orgbe3b019">3.2 Conversión de JSON a diccionario</h3>
+<div class="outline-text-3" id="text-orgbe3b019">
 <div class="org-src-container">
-<pre class="src src-python">def get_weather_data(city, api_key, units):
-    """Obtiene los datos del clima de la API de OpenWeatherMap."""
-    try:
-        logging.info(f"Obteniendo datos del clima para {city}...")
-        params = {
-            'q': city,
-            'appid': api_key,
-            'units': units
-        }
-        response = requests.get(BASE_URL, params=params)
-        response.raise_for_status() # Lanza un error para códigos de estado HTTP 4xx/5xx
-        data = response.json()
+<pre class="src src-python"><span style="color: #a020f0;">def</span> <span style="color: #0000ff;">get_weather_data</span>(city, api_key, units):
+&#160; &#160; <span style="color: #8b2252;">"""Obtiene los datos del clima de la API de OpenWeatherMap."""</span>
+&#160; &#160; <span style="color: #a020f0;">try</span>:
+&#160; &#160; &#160; &#160; logging.info(f<span style="color: #8b2252;">"Obteniendo datos del clima para </span>{city}<span style="color: #8b2252;">..."</span>)
+&#160; &#160; &#160; &#160; <span style="color: #a0522d;">params</span> = {
+&#160; &#160; &#160; &#160; &#160; &#160; <span style="color: #8b2252;">'q'</span>: city,
+&#160; &#160; &#160; &#160; &#160; &#160; <span style="color: #8b2252;">'appid'</span>: api_key,
+&#160; &#160; &#160; &#160; &#160; &#160; <span style="color: #8b2252;">'units'</span>: units
+&#160; &#160; &#160; &#160; }
+&#160; &#160; &#160; &#160; <span style="color: #a0522d;">response</span> = requests.get(BASE_URL, params=params)
+&#160; &#160; &#160; &#160; response.raise_for_status() <span style="color: #b22222;"># </span><span style="color: #b22222;">Lanza un error para c&#243;digos de estado HTTP 4xx/5xx
+</span>&#160; &#160; &#160; &#160; <span style="color: #a0522d;">data</span> = response.json()
 
-        # Extrae los datos relevantes
-        dt_utc = datetime.utcfromtimestamp(data['dt'])
+&#160; &#160; &#160; &#160; <span style="color: #b22222;"># </span><span style="color: #b22222;">Extrae los datos relevantes
+</span>&#160; &#160; &#160; &#160; <span style="color: #a0522d;">dt_utc</span> = datetime.utcfromtimestamp(data[<span style="color: #8b2252;">'dt'</span>])
 
-        filtered_data = {
-            'dt': dt_utc.strftime('%Y-%m-%d %H:%M:%S'),
-            'coord_lon': data['coord']['lon'],
-            'coord_lat': data['coord']['lat'],
-            'weather_0description': data['weather'][0]['description'],
-            'main_temp': data['main']['temp'],
-            'main_feels_like': data['main']['feels_like'],
-            'main_temp_min': data['main']['temp_min'],
-            'main_temp_max': data['main']['temp_max'],
-            'main_pressure': data['main']['pressure'],
-            'main_humidity': data['main']['humidity'],
-            'wind_speed': data['wind']['speed'],
-            'wind_deg': data['wind']['deg'],
-            'clouds_all': data['clouds']['all'],
-            'city': data['name'],
-            'cod': data['cod']
-        }
-        return filtered_data
+&#160; &#160; &#160; &#160; <span style="color: #a0522d;">filtered_data</span> = {
+&#160; &#160; &#160; &#160; &#160; &#160; <span style="color: #8b2252;">'dt'</span>: dt_utc.strftime(<span style="color: #8b2252;">'%Y-%m-%d %H:%M:%S'</span>),
+&#160; &#160; &#160; &#160; &#160; &#160; <span style="color: #8b2252;">'coord_lon'</span>: data[<span style="color: #8b2252;">'coord'</span>][<span style="color: #8b2252;">'lon'</span>],
+&#160; &#160; &#160; &#160; &#160; &#160; <span style="color: #8b2252;">'coord_lat'</span>: data[<span style="color: #8b2252;">'coord'</span>][<span style="color: #8b2252;">'lat'</span>],
+&#160; &#160; &#160; &#160; &#160; &#160; <span style="color: #8b2252;">'weather_0description'</span>: data[<span style="color: #8b2252;">'weather'</span>][0][<span style="color: #8b2252;">'description'</span>],
+&#160; &#160; &#160; &#160; &#160; &#160; <span style="color: #8b2252;">'main_temp'</span>: data[<span style="color: #8b2252;">'main'</span>][<span style="color: #8b2252;">'temp'</span>],
+&#160; &#160; &#160; &#160; &#160; &#160; <span style="color: #8b2252;">'main_feels_like'</span>: data[<span style="color: #8b2252;">'main'</span>][<span style="color: #8b2252;">'feels_like'</span>],
+&#160; &#160; &#160; &#160; &#160; &#160; <span style="color: #8b2252;">'main_temp_min'</span>: data[<span style="color: #8b2252;">'main'</span>][<span style="color: #8b2252;">'temp_min'</span>],
+&#160; &#160; &#160; &#160; &#160; &#160; <span style="color: #8b2252;">'main_temp_max'</span>: data[<span style="color: #8b2252;">'main'</span>][<span style="color: #8b2252;">'temp_max'</span>],
+&#160; &#160; &#160; &#160; &#160; &#160; <span style="color: #8b2252;">'main_pressure'</span>: data[<span style="color: #8b2252;">'main'</span>][<span style="color: #8b2252;">'pressure'</span>],
+&#160; &#160; &#160; &#160; &#160; &#160; <span style="color: #8b2252;">'main_humidity'</span>: data[<span style="color: #8b2252;">'main'</span>][<span style="color: #8b2252;">'humidity'</span>],
+&#160; &#160; &#160; &#160; &#160; &#160; <span style="color: #8b2252;">'wind_speed'</span>: data[<span style="color: #8b2252;">'wind'</span>][<span style="color: #8b2252;">'speed'</span>],
+&#160; &#160; &#160; &#160; &#160; &#160; <span style="color: #8b2252;">'wind_deg'</span>: data[<span style="color: #8b2252;">'wind'</span>][<span style="color: #8b2252;">'deg'</span>],
+&#160; &#160; &#160; &#160; &#160; &#160; <span style="color: #8b2252;">'clouds_all'</span>: data[<span style="color: #8b2252;">'clouds'</span>][<span style="color: #8b2252;">'all'</span>],
+&#160; &#160; &#160; &#160; &#160; &#160; <span style="color: #8b2252;">'city'</span>: data[<span style="color: #8b2252;">'name'</span>],
+&#160; &#160; &#160; &#160; &#160; &#160; <span style="color: #8b2252;">'cod'</span>: data[<span style="color: #8b2252;">'cod'</span>]
+&#160; &#160; &#160; &#160; }
+&#160; &#160; &#160; &#160; <span style="color: #a020f0;">return</span> filtered_data
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgd6e95f7" class="outline-3">
-<h3 id="orgd6e95f7">3.3 Guardar datos en CSV</h3>
-<div class="outline-text-3" id="text-orgd6e95f7">
+<div id="outline-container-org09c21f7" class="outline-3">
+<h3 id="org09c21f7">3.3 Guardar datos en CSV</h3>
+<div class="outline-text-3" id="text-org09c21f7">
 <div class="org-src-container">
-<pre class="src src-python">def save_to_csv(data, filename):
- """Guarda los datos en un archivo CSV."""
- if data is None:
- return
+<pre class="src src-python"><span style="color: #a020f0;">def</span> <span style="color: #0000ff;">save_to_csv</span>(data, filename):
+ <span style="color: #8b2252;">"""Guarda los datos en un archivo CSV."""</span>
+ <span style="color: #a020f0;">if</span> data <span style="color: #a020f0;">is</span> <span style="color: #008b8b;">None</span>:
+ <span style="color: #a020f0;">return</span>
 
- df_new_row = pd.DataFrame([data])
+ <span style="color: #a0522d;">df_new_row</span> = pd.DataFrame([data])
 
-  if not os.path.exists(filename):
- df_new_row.to_csv(filename, index=False)
- logging.info(f"Datos añadidos a '{filename}'. Filas totales: {len(df_new_row)}")
- else:
- df_existing = pd.read_csv(filename)
- df_combined = pd.concat([df_existing, df_new_row], ignore_index=True)
- df_combined.to_csv(filename, index=False)
- logging.info(f"Datos añadidos a '{filename}'. Filas totales: {len(df_combined)}")
+  <span style="color: #a020f0;">if</span> <span style="color: #a020f0;">not</span> os.path.exists(filename):
+ df_new_row.to_csv(filename, index=<span style="color: #008b8b;">False</span>)
+ logging.info(f<span style="color: #8b2252;">"Datos a&#241;adidos a '</span>{filename}<span style="color: #8b2252;">'. Filas totales: </span>{<span style="color: #483d8b;">len</span>(df_new_row)}<span style="color: #8b2252;">"</span>)
+ <span style="color: #a020f0;">else</span>:
+ <span style="color: #a0522d;">df_existing</span> = pd.read_csv(filename)
+ <span style="color: #a0522d;">df_combined</span> = pd.concat([df_existing, df_new_row], ignore_index=<span style="color: #008b8b;">True</span>)
+ df_combined.to_csv(filename, index=<span style="color: #008b8b;">False</span>)
+ logging.info(f<span style="color: #8b2252;">"Datos a&#241;adidos a '</span>{filename}<span style="color: #8b2252;">'. Filas totales: </span>{<span style="color: #483d8b;">len</span>(df_combined)}<span style="color: #8b2252;">"</span>)
 </pre>
 </div>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org554d733" class="outline-2">
-<h2 id="org554d733">4. Script ejecutable `.sh`</h2>
-<div class="outline-text-2" id="text-org554d733">
+<div id="outline-container-org1ceeea8" class="outline-2">
+<h2 id="org1ceeea8">4. Script ejecutable `.sh`</h2>
+<div class="outline-text-2" id="text-org1ceeea8">
 <div class="org-src-container">
-<pre class="src src-sh">#!/usr/bin/sh
-source /home/&lt;user&gt;/miniforge3/etc/profile.d/conda.sh
-eval "$(conda shell.bash hook)"
+<pre class="src src-sh"><span style="color: #b22222;">#</span><span style="color: #b22222;">!/usr/bin/</span><span style="color: #a020f0;">sh</span><span style="color: #b22222;">
+</span><span style="color: #483d8b;">source</span> /home/&lt;user&gt;/miniforge3/etc/profile.d/conda.sh
+<span style="color: #483d8b;">eval</span> <span style="color: #8b2252;">"$(</span><span style="color: #ff00ff;">conda shell.bash hook</span><span style="color: #8b2252;">)"</span>
 conda activate iccd332
 python main.py
 </pre>
@@ -393,9 +393,9 @@ python main.py
 </div>
 </div>
 
-<div id="outline-container-orgc2939f5" class="outline-2">
-<h2 id="orgc2939f5">5. Configuración de `crontab`</h2>
-<div class="outline-text-2" id="text-orgc2939f5">
+<div id="outline-container-org2863a37" class="outline-2">
+<h2 id="org2863a37">5. Configuración de `crontab`</h2>
+<div class="outline-text-2" id="text-org2863a37">
 <div class="org-src-container">
 <pre class="src src-sh">*/15 * * * * cd /home/&lt;user&gt;/CityWeather &amp;&amp; ./get-weather.sh &gt;&gt; output.log 2&gt;&amp;1
 </pre>
@@ -410,12 +410,12 @@ python main.py
 El redireccionamiento de salida `&gt;&gt; output.log 2&gt;&amp;1` es crucial:
 </p>
 </div>
-<div id="outline-container-org0d307a0" class="outline-4">
-<h4 id="org0d307a0">&gt;&gt; output.log` toma la salida estándar del script y la añade al archivo `output.log`[cite: 225].</h4>
+<div id="outline-container-org42f26e9" class="outline-4">
+<h4 id="org42f26e9">&gt;&gt; output.log` toma la salida estándar del script y la añade al archivo `output.log`[cite: 225].</h4>
 </div>
-<div id="outline-container-orgeb12ddd" class="outline-4">
-<h4 id="orgeb12ddd">2&gt;&amp;1` redirige cualquier error que ocurra durante la ejecución (salida de error estándar) al mismo archivo `output.log`[cite: 272].</h4>
-<div class="outline-text-4" id="text-orgeb12ddd">
+<div id="outline-container-orge133915" class="outline-4">
+<h4 id="orge133915">2&gt;&amp;1` redirige cualquier error que ocurra durante la ejecución (salida de error estándar) al mismo archivo `output.log`[cite: 272].</h4>
+<div class="outline-text-4" id="text-orge133915">
 <p>
 [cite<sub>start</sub>]De esta manera, el archivo `output.log` contendrá tanto la información de la ejecución normal del script como cualquier mensaje de error, lo que te permite verificar que el proceso se está ejecutando correctamente cada 15 minutos[cite: 225, 272].
 #+END<sub>QUOTE</sub>
@@ -424,27 +424,27 @@ El redireccionamiento de salida `&gt;&gt; output.log 2&gt;&amp;1` es crucial:
 </div>
 </div>
 
-<div id="outline-container-org1ed17a2" class="outline-2">
-<h2 id="org1ed17a2">6. Presentación de Resultados</h2>
-<div class="outline-text-2" id="text-org1ed17a2">
+<div id="outline-container-orgbc30248" class="outline-2">
+<h2 id="orgbc30248">6. Presentación de Resultados</h2>
+<div class="outline-text-2" id="text-orgbc30248">
 </div>
-<div id="outline-container-org0502acc" class="outline-3">
-<h3 id="org0502acc">6.1 Muestra aleatoria de datos</h3>
-<div class="outline-text-3" id="text-org0502acc">
+<div id="outline-container-orgf27ef59" class="outline-3">
+<h3 id="orgf27ef59">6.1 Muestra aleatoria de datos</h3>
+<div class="outline-text-3" id="text-orgf27ef59">
 <div class="org-src-container">
-<pre class="src src-python">import pandas as pd
-df = pd.read_csv('/home/andyuniversidad/Proyecto_Fin_Bimestre_Arquitectura/clima-detroit-hoy.csv')
-print(df.sample(5))
+<pre class="src src-python"><span style="color: #a020f0;">import</span> pandas <span style="color: #a020f0;">as</span> pd
+<span style="color: #a0522d;">df</span> = pd.read_csv(<span style="color: #8b2252;">'/home/andyuniversidad/Proyecto_Fin_Bimestre_Arquitectura/clima-detroit-hoy.csv'</span>)
+<span style="color: #483d8b;">print</span>(df.sample(5))
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgd212ab6" class="outline-3">
-<h3 id="orgd212ab6">6.2 Gráfica: Temperatura vs Tiempo</h3>
-<div class="outline-text-3" id="text-orgd212ab6">
+<div id="outline-container-orgb9e3750" class="outline-3">
+<h3 id="orgb9e3750">6.2 Gráfica: Temperatura vs Tiempo</h3>
+<div class="outline-text-3" id="text-orgb9e3750">
 
-<div id="org8cd8808" class="figure">
+<div id="org21ba3ef" class="figure">
 <p><img src="./public/images/temperature.png" alt="temperature.png" />
 </p>
 <p><span class="figure-number">Figure 1: </span>Temperatura vs Tiempo</p>
@@ -452,11 +452,11 @@ print(df.sample(5))
 </div>
 </div>
 
-<div id="outline-container-org84d83be" class="outline-3">
-<h3 id="org84d83be">6.3 Gráfica: Humedad vs Tiempo</h3>
-<div class="outline-text-3" id="text-org84d83be">
+<div id="outline-container-org20732fb" class="outline-3">
+<h3 id="org20732fb">6.3 Gráfica: Humedad vs Tiempo</h3>
+<div class="outline-text-3" id="text-org20732fb">
 
-<div id="orgd4b289f" class="figure">
+<div id="org053b744" class="figure">
 <p><img src="./public/images/humidity.png" alt="humidity.png" />
 </p>
 <p><span class="figure-number">Figure 2: </span>Humedad vs Tiempo</p>
@@ -464,11 +464,11 @@ print(df.sample(5))
 </div>
 </div>
 
-<div id="outline-container-org44b1abd" class="outline-3">
-<h3 id="org44b1abd">6.4 Grafica Frecuencia Descripción Clima</h3>
-<div class="outline-text-3" id="text-org44b1abd">
+<div id="outline-container-org1f8596a" class="outline-3">
+<h3 id="org1f8596a">6.4 Grafica Frecuencia Descripción Clima</h3>
+<div class="outline-text-3" id="text-org1f8596a">
 
-<div id="org510cedb" class="figure">
+<div id="org613769f" class="figure">
 <p><img src="./public/images/optional_plot.png" alt="optional_plot.png" />
 </p>
 <p><span class="figure-number">Figure 3: </span>Frecuencia Descripción Clima</p>
@@ -477,9 +477,9 @@ print(df.sample(5))
 </div>
 </div>
 
-<div id="outline-container-org10612f9" class="outline-2">
-<h2 id="org10612f9">7. Conclusiones</h2>
-<div class="outline-text-2" id="text-org10612f9">
+<div id="outline-container-org75e93c4" class="outline-2">
+<h2 id="org75e93c4">7. Conclusiones</h2>
+<div class="outline-text-2" id="text-org75e93c4">
 <p>
 El desarrollo de este proyecto permitió aplicar diversos conocimientos de programación, automatización y publicación web en un entorno real y práctico. A continuación, se detallan algunas conclusiones relevantes:
 </p>
@@ -495,9 +495,9 @@ El desarrollo de este proyecto permitió aplicar diversos conocimientos de progr
 </div>
 
 
-<div id="outline-container-orgfbf83f0" class="outline-2">
-<h2 id="orgfbf83f0">8. Referencias</h2>
-<div class="outline-text-2" id="text-orgfbf83f0">
+<div id="outline-container-org04be71d" class="outline-2">
+<h2 id="org04be71d">8. Referencias</h2>
+<div class="outline-text-2" id="text-org04be71d">
 <ul class="org-ul">
 <li><a href="https://openweathermap.org/api">Documentación oficial OpenWeather</a></li>
 <li><a href="https://realpython.com/python-requests/">Uso de requests en Python</a></li>
@@ -509,9 +509,9 @@ El desarrollo de este proyecto permitió aplicar diversos conocimientos de progr
 </div>
 </div>
 
-<div id="outline-container-orgb5df12e" class="outline-2">
-<h2 id="orgb5df12e">Créditos y Licencia</h2>
-<div class="outline-text-2" id="text-orgb5df12e">
+<div id="outline-container-orgea14599" class="outline-2">
+<h2 id="orgea14599">Créditos y Licencia</h2>
+<div class="outline-text-2" id="text-orgea14599">
 <p>
 Desarrollado por los futuros ingenieros Andres Alban y Andy Cabrera del curso de Arquitectura de computadoras en la facultad de Sistemas de la Escula politecnica nacional 
 </p>
@@ -521,7 +521,7 @@ Desarrollado por los futuros ingenieros Andres Alban y Andy Cabrera del curso de
 <div id="postamble" class="status">
 <p class="date">Date: 2025-08-04</p>
 <p class="author">Author: Andres Alban y Andy Cabrera</p>
-<p class="date">Created: 2025-08-03 Sun 03:00</p>
+<p class="date">Created: 2025-08-03 Sun 03:10</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

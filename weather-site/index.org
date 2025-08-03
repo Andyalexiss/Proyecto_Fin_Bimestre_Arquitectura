@@ -20,29 +20,40 @@ Se desarrolló un script en Python que consulta los datos actuales del clima y l
 Se desea realizar un registro climatológico de la ciudad de *Detroit* utilizando el API de OpenWeather. El sistema debe capturar datos cada 15 minutos y almacenarlos en un archivo CSV, de forma acumulativa.
 
 #+BEGIN_QUOTE
-Aquí irá una explicación detallada del propósito del script y los datos que se esperan capturar (temperatura, humedad, lluvia, etc.).
+El objetivo principal del proyecto es demostrar las habilidades adquiridas en el curso de Arquitectura de Computadores, incluyendo conocimientos de Linux, uso de Emacs/Jupyter y la configuración de un entorno para ciencia de datos con Mamba/Anaconda. Para lograrlo, se creará un script de Python que se conecte a la API de OpenWeather y obtenga datos climatológicos (temperatura, humedad, etc.) utilizando la latitud y longitud de la ciudad. Los resultados de cada consulta se registrarán en un archivo llamado `clima-detroit-hoy.csv`.
+
+Además, se utilizará un script `sh` llamado `get-weather.sh` para automatizar la ejecución del programa de Python. La ejecución de este script se programará con `crontab` para que se realice cada 15 minutos, almacenando las salidas y errores en un archivo de registro llamado `output.log`.
 #+END_QUOTE
 
 * 2. Estructura del Proyecto
 
 #+BEGIN_SRC shell
 tree
-.
+├── CityTemperatureAnalysis.ipynb
 ├── clima-detroit-hoy.csv
 ├── get-weather.sh
 ├── main.py
 ├── output.log
-├── weather-site/
-│   ├── index.org
-│   └── public/
-│       └── images/
-└── images/
-    ├── temperature.png
-    └── humidity.png
+└── weather-site
+    ├── build-site.el
+    ├── build.sh
+    ├── content
+    │   └── images
+    │       ├── humidity.png
+    │       ├── optional_plot.png
+    │       └── temperature.png
+    ├── index.org
+    ├── index.org_archive
+    └── public
+        ├── images
+        │   ├── humidity.png
+        │   ├── optional_plot.png
+        │   └── temperature.png
+        └── index.html
 #+END_SRC
 
 #+BEGIN_QUOTE
-###Aquí puede explicar cómo se organizó la estructura de carpetas y por qué.###
+La estructura de carpetas se organiza para separar la lógica de la recolección de datos del contenido del sitio web. El directorio raíz contiene los scripts y los archivos generados automáticamente (`main.py`, `get-weather.sh`, `clima-detroit-hoy.csv` y `output.log`). Las gráficas que se generan (`temperature.png`, `humidity.png`) se guardan en el directorio `images/`.
 #+END_QUOTE
 
 * 3. Descripción del Código
@@ -50,19 +61,85 @@ tree
 ** 3.1 Lectura del API
 
 #+BEGIN_SRC python
-### Aquí irá el código de conexión al API y lectura del JSON ##
+def get_weather_data(city, api_key, units):
+    """Obtiene los datos del clima de la API de OpenWeatherMap."""
+    try:
+        logging.info(f"Obteniendo datos del clima para {city}...")
+        params = {
+            'q': city,
+            'appid': api_key,
+            'units': units
+        }
+        response = requests.get(BASE_URL, params=params)
+        response.raise_for_status() # Lanza un error para códigos de estado HTTP 4xx/5xx
+        data = response.json()
+        return data
+    except requests.exceptions.RequestException as e:
+        logging.error(f"Error al conectar con la API: {e}")
+        return None
+    except KeyError as e:
+        logging.error(f"Error al procesar los datos de la API. Falta la clave: {e}")
+        logging.error(f"Respuesta completa: {response.text}")
+        return None
 #+END_SRC
 
 ** 3.2 Conversión de JSON a diccionario
 
 #+BEGIN_SRC python
-### Aquí el bloque donde se transforma el JSON en un diccionario o dataframe ###
+def get_weather_data(city, api_key, units):
+    """Obtiene los datos del clima de la API de OpenWeatherMap."""
+    try:
+        logging.info(f"Obteniendo datos del clima para {city}...")
+        params = {
+            'q': city,
+            'appid': api_key,
+            'units': units
+        }
+        response = requests.get(BASE_URL, params=params)
+        response.raise_for_status() # Lanza un error para códigos de estado HTTP 4xx/5xx
+        data = response.json()
+
+        # Extrae los datos relevantes
+        dt_utc = datetime.utcfromtimestamp(data['dt'])
+
+        filtered_data = {
+            'dt': dt_utc.strftime('%Y-%m-%d %H:%M:%S'),
+            'coord_lon': data['coord']['lon'],
+            'coord_lat': data['coord']['lat'],
+            'weather_0description': data['weather'][0]['description'],
+            'main_temp': data['main']['temp'],
+            'main_feels_like': data['main']['feels_like'],
+            'main_temp_min': data['main']['temp_min'],
+            'main_temp_max': data['main']['temp_max'],
+            'main_pressure': data['main']['pressure'],
+            'main_humidity': data['main']['humidity'],
+            'wind_speed': data['wind']['speed'],
+            'wind_deg': data['wind']['deg'],
+            'clouds_all': data['clouds']['all'],
+            'city': data['name'],
+            'cod': data['cod']
+        }
+        return filtered_data
 #+END_SRC
 
 ** 3.3 Guardar datos en CSV
 
 #+BEGIN_SRC python
-### Aquí va el código para guardar en clima-detroit-hoy.csv sin borrar datos anteriores ###
+def save_to_csv(data, filename):
+ """Guarda los datos en un archivo CSV."""
+ if data is None:
+ return
+
+ df_new_row = pd.DataFrame([data])
+
+  if not os.path.exists(filename):
+ df_new_row.to_csv(filename, index=False)
+ logging.info(f"Datos añadidos a '{filename}'. Filas totales: {len(df_new_row)}")
+ else:
+ df_existing = pd.read_csv(filename)
+ df_combined = pd.concat([df_existing, df_new_row], ignore_index=True)
+ df_combined.to_csv(filename, index=False)
+ logging.info(f"Datos añadidos a '{filename}'. Filas totales: {len(df_combined)}")
 #+END_SRC
 
 * 4. Script ejecutable `.sh`
@@ -82,20 +159,33 @@ python main.py
 #+END_SRC
 
 #+BEGIN_QUOTE
-### Aquí irá una explicación de cómo se configuró el crontab y qué hace el redireccionamiento de salida. ###
+[cite_start]Este comando en *crontab* está configurado para ejecutar el script `get-weather.sh` cada 15 minutos[cite: 214]. [cite_start]El comando `cd /home/andyuniversidad/CityWeather` asegura que la terminal se ubique en el directorio del proyecto antes de ejecutar el script[cite: 269].
+
+El redireccionamiento de salida `>> output.log 2>&1` es crucial:
+*** >> output.log` toma la salida estándar del script y la añade al archivo `output.log`[cite: 225].
+*** 2>&1` redirige cualquier error que ocurra durante la ejecución (salida de error estándar) al mismo archivo `output.log`[cite: 272].
+
+[cite_start]De esta manera, el archivo `output.log` contendrá tanto la información de la ejecución normal del script como cualquier mensaje de error, lo que te permite verificar que el proceso se está ejecutando correctamente cada 15 minutos[cite: 225, 272].
 #+END_QUOTE
 
 * 6. Presentación de Resultados
 
 ** 6.1 Muestra aleatoria de datos
-
-#+BEGIN_SRC python
-import pandas as pd
-df = pd.read_csv("clima-detroit-hoy.csv")
-df.sample(10) 
-
-### por ejemplo 
+#+BEGIN_SRC python :results output
+  import pandas as pd
+  df = pd.read_csv('/home/andyuniversidad/Proyecto_Fin_Bimestre_Arquitectura/clima-detroit-hoy.csv')
+  print(df.sample(5))
 #+END_SRC
+
+#+RESULTS:
+:                       dt  coord_lon  coord_lat  ... clouds_all     city  cod
+: 17   2025-08-01 04:19:27   -83.0458    42.3314  ...          0  Detroit  200
+: 146  2025-08-02 21:10:04   -83.0458    42.3314  ...         25  Detroit  200
+: 81   2025-08-01 06:36:50   -83.0458    42.3314  ...          0  Detroit  200
+: 157  2025-08-03 00:44:47   -83.0458    42.3314  ...          0  Detroit  200
+: 112  2025-08-02 02:13:26   -83.0458    42.3314  ...          0  Detroit  200
+: 
+: [5 rows x 15 columns]
 
 ** 6.2 Gráfica: Temperatura vs Tiempo
 
@@ -107,11 +197,10 @@ df.sample(10)
 #+CAPTION: Humedad vs Tiempo
 [[./public/images/humidity.png]]
 
-** 6.4 Otra gráfica de interés (opcional)
+** 6.4 Grafica Frecuencia Descripción Clima
 
-#+BEGIN_QUOTE
-### Aquí puedes insertar alguna gráfica adicional como velocidad del viento, presión atmosférica, etc. ###
-#+END_QUOTE
+#+CAPTION: Frecuencia Descripción Clima
+[[./public/images/optional_plot.png]]
 
 * 7. Conclusiones
 
