@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-08-03 Sun 09:14 -->
+<!-- 2025-08-03 Sun 14:39 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Clima en Detroit - Registro Automatizado</title>
@@ -199,9 +199,9 @@
 <div id="content" class="content">
 <h1 class="title">Clima en Detroit - Registro Automatizado</h1>
 
-<div id="outline-container-org3c8bb16" class="outline-2">
-<h2 id="org3c8bb16">Descripción del Proyecto</h2>
-<div class="outline-text-2" id="text-org3c8bb16">
+<div id="outline-container-org8dea651" class="outline-2">
+<h2 id="org8dea651">Descripción del Proyecto</h2>
+<div class="outline-text-2" id="text-org8dea651">
 <p>
 Este proyecto tiene como finalidad simular un sistema de monitoreo ambiental que permita recolectar, registrar y presentar información climática de manera automatizada y continua. A través del uso de herramientas de programación, automatización en sistemas Linux y tecnologías web ligeras, se busca crear una solución sencilla, funcional y documentada que represente una aplicación real del desarrollo de software para la captura y análisis de datos externos.
 </p>
@@ -222,9 +222,9 @@ Se desarrolló un script en Python que consulta los datos actuales del clima y l
 </div>
 </div>
 
-<div id="outline-container-orgdefc606" class="outline-2">
-<h2 id="orgdefc606">1. Formulación del Problema</h2>
-<div class="outline-text-2" id="text-orgdefc606">
+<div id="outline-container-orge6f0d83" class="outline-2">
+<h2 id="orge6f0d83">1. Formulación del Problema</h2>
+<div class="outline-text-2" id="text-orge6f0d83">
 <p>
 Se desea realizar un registro climatológico de la ciudad de <b>Detroit</b> utilizando el API de OpenWeather. El sistema debe capturar datos cada 15 minutos y almacenarlos en un archivo CSV, de forma acumulativa.
 </p>
@@ -241,9 +241,9 @@ Además, se utilizará un script `sh` llamado `get-weather.sh` para automatizar 
 </div>
 </div>
 
-<div id="outline-container-org29bc83e" class="outline-2">
-<h2 id="org29bc83e">2. Estructura del Proyecto</h2>
-<div class="outline-text-2" id="text-org29bc83e">
+<div id="outline-container-org3bdc88b" class="outline-2">
+<h2 id="org3bdc88b">2. Estructura del Proyecto</h2>
+<div class="outline-text-2" id="text-org3bdc88b">
 <div class="org-src-container">
 <pre class="src src-shell">tree
 &#9500;&#9472;&#9472; CityTemperatureAnalysis.ipynb
@@ -278,13 +278,13 @@ La estructura de carpetas se organiza para separar la lógica de la recolección
 </div>
 </div>
 
-<div id="outline-container-org1f902d7" class="outline-2">
-<h2 id="org1f902d7">3. Descripción del Código</h2>
-<div class="outline-text-2" id="text-org1f902d7">
+<div id="outline-container-org651aeb0" class="outline-2">
+<h2 id="org651aeb0">3. Descripción del Código</h2>
+<div class="outline-text-2" id="text-org651aeb0">
 </div>
-<div id="outline-container-orgf112195" class="outline-3">
-<h3 id="orgf112195">3.1 Lectura del API</h3>
-<div class="outline-text-3" id="text-orgf112195">
+<div id="outline-container-orgb36efc5" class="outline-3">
+<h3 id="orgb36efc5">3.1 Lectura del API</h3>
+<div class="outline-text-3" id="text-orgb36efc5">
 <div class="org-src-container">
 <pre class="src src-python"><span style="color: #a020f0;">def</span> <span style="color: #0000ff;">get_weather_data</span>(city, api_key, units):
 &#160; &#160; <span style="color: #8b2252;">"""Obtiene los datos del clima de la API de OpenWeatherMap."""</span>
@@ -311,9 +311,9 @@ La estructura de carpetas se organiza para separar la lógica de la recolección
 </div>
 </div>
 
-<div id="outline-container-org7768754" class="outline-3">
-<h3 id="org7768754">3.2 Conversión de JSON a diccionario</h3>
-<div class="outline-text-3" id="text-org7768754">
+<div id="outline-container-orgf3a40f2" class="outline-3">
+<h3 id="orgf3a40f2">3.2 Conversión de JSON a diccionario</h3>
+<div class="outline-text-3" id="text-orgf3a40f2">
 <div class="org-src-container">
 <pre class="src src-python"><span style="color: #a020f0;">def</span> <span style="color: #0000ff;">get_weather_data</span>(city, api_key, units):
 &#160; &#160; <span style="color: #8b2252;">"""Obtiene los datos del clima de la API de OpenWeatherMap."""</span>
@@ -354,9 +354,9 @@ La estructura de carpetas se organiza para separar la lógica de la recolección
 </div>
 </div>
 
-<div id="outline-container-org6b0ab74" class="outline-3">
-<h3 id="org6b0ab74">3.3 Guardar datos en CSV</h3>
-<div class="outline-text-3" id="text-org6b0ab74">
+<div id="outline-container-orged483ec" class="outline-3">
+<h3 id="orged483ec">3.3 Guardar datos en CSV</h3>
+<div class="outline-text-3" id="text-orged483ec">
 <div class="org-src-container">
 <pre class="src src-python"><span style="color: #a020f0;">def</span> <span style="color: #0000ff;">save_to_csv</span>(data, filename):
  <span style="color: #8b2252;">"""Guarda los datos en un archivo CSV."""</span>
@@ -379,9 +379,9 @@ La estructura de carpetas se organiza para separar la lógica de la recolección
 </div>
 </div>
 
-<div id="outline-container-org1934726" class="outline-2">
-<h2 id="org1934726">4. Script ejecutable `.sh`</h2>
-<div class="outline-text-2" id="text-org1934726">
+<div id="outline-container-orge54a5ea" class="outline-2">
+<h2 id="orge54a5ea">4. Script ejecutable `.sh`</h2>
+<div class="outline-text-2" id="text-orge54a5ea">
 <div class="org-src-container">
 <pre class="src src-sh"><span style="color: #b22222;">#</span><span style="color: #b22222;">!/usr/bin/</span><span style="color: #a020f0;">sh</span><span style="color: #b22222;">
 </span><span style="color: #483d8b;">source</span> /home/&lt;user&gt;/miniforge3/etc/profile.d/conda.sh
@@ -393,9 +393,9 @@ python main.py
 </div>
 </div>
 
-<div id="outline-container-orge2340d7" class="outline-2">
-<h2 id="orge2340d7">5. Configuración de `crontab`</h2>
-<div class="outline-text-2" id="text-orge2340d7">
+<div id="outline-container-orgf5bdd13" class="outline-2">
+<h2 id="orgf5bdd13">5. Configuración de `crontab`</h2>
+<div class="outline-text-2" id="text-orgf5bdd13">
 <div class="org-src-container">
 <pre class="src src-sh">*/15 * * * * cd /home/&lt;user&gt;/CityWeather &amp;&amp; ./get-weather.sh &gt;&gt; output.log 2&gt;&amp;1
 </pre>
@@ -410,12 +410,12 @@ python main.py
 El redireccionamiento de salida `&gt;&gt; output.log 2&gt;&amp;1` es crucial:
 </p>
 </div>
-<div id="outline-container-org89efcfb" class="outline-4">
-<h4 id="org89efcfb">&gt;&gt; output.log` toma la salida estándar del script y la añade al archivo `output.log`[cite: 225].</h4>
+<div id="outline-container-org6d1efdd" class="outline-4">
+<h4 id="org6d1efdd">&gt;&gt; output.log` toma la salida estándar del script y la añade al archivo `output.log`[cite: 225].</h4>
 </div>
-<div id="outline-container-orgdc0c112" class="outline-4">
-<h4 id="orgdc0c112">2&gt;&amp;1` redirige cualquier error que ocurra durante la ejecución (salida de error estándar) al mismo archivo `output.log`[cite: 272].</h4>
-<div class="outline-text-4" id="text-orgdc0c112">
+<div id="outline-container-orgc5f044f" class="outline-4">
+<h4 id="orgc5f044f">2&gt;&amp;1` redirige cualquier error que ocurra durante la ejecución (salida de error estándar) al mismo archivo `output.log`[cite: 272].</h4>
+<div class="outline-text-4" id="text-orgc5f044f">
 <p>
 [cite<sub>start</sub>]De esta manera, el archivo `output.log` contendrá tanto la información de la ejecución normal del script como cualquier mensaje de error, lo que te permite verificar que el proceso se está ejecutando correctamente cada 15 minutos[cite: 225, 272].
 #+END<sub>QUOTE</sub>
@@ -424,27 +424,56 @@ El redireccionamiento de salida `&gt;&gt; output.log 2&gt;&amp;1` es crucial:
 </div>
 </div>
 
-<div id="outline-container-orgd95fb5a" class="outline-2">
-<h2 id="orgd95fb5a">6. Presentación de Resultados</h2>
-<div class="outline-text-2" id="text-orgd95fb5a">
+<div id="outline-container-org2886fc0" class="outline-2">
+<h2 id="org2886fc0">6. Presentación de Resultados</h2>
+<div class="outline-text-2" id="text-org2886fc0">
 </div>
-<div id="outline-container-orge73012f" class="outline-3">
-<h3 id="orge73012f">6.1 Muestra aleatoria de datos</h3>
-<div class="outline-text-3" id="text-orge73012f">
-<div class="org-src-container">
-<pre class="src src-python"><span style="color: #a020f0;">import</span> pandas <span style="color: #a020f0;">as</span> pd
-<span style="color: #a0522d;">df</span> = pd.read_csv(<span style="color: #8b2252;">'/home/andyuniversidad/Proyecto_Fin_Bimestre_Arquitectura/clima-detroit-hoy.csv'</span>)
-<span style="color: #483d8b;">print</span>(df.sample(5))
+<div id="outline-container-org5deacba" class="outline-3">
+<h3 id="org5deacba">6.1 Muestra aleatoria de datos</h3>
+<div class="outline-text-3" id="text-org5deacba">
+<pre class="example" id="org90ed98f">
+                      dt  coord_lon  coord_lat  ... clouds_all     city  cod
+84   2025-08-01 06:36:50   -83.0458    42.3314  ...          0  Detroit  200
+174  2025-08-03 05:00:05   -83.0458    42.3314  ...          0  Detroit  200
+60   2025-08-01 05:55:53   -83.0458    42.3314  ...          0  Detroit  200
+149  2025-08-02 22:03:40   -83.0458    42.3314  ...          0  Detroit  200
+41   2025-08-01 05:17:22   -83.0458    42.3314  ...          0  Detroit  200
+175  2025-08-03 05:11:35   -83.0458    42.3314  ...          0  Detroit  200
+153  2025-08-02 23:06:24   -83.0458    42.3314  ...          0  Detroit  200
+109  2025-08-02 01:28:26   -83.0458    42.3314  ...          0  Detroit  200
+166  2025-08-03 02:57:03   -83.0458    42.3314  ...          0  Detroit  200
+119  2025-08-02 03:59:58   -83.0458    42.3314  ...          0  Detroit  200
+19   2025-08-01 04:33:24   -83.0458    42.3314  ...          0  Detroit  200
+103  2025-08-01 07:23:40   -83.0458    42.3314  ...          0  Detroit  200
+165  2025-08-03 02:45:01   -83.0458    42.3314  ...          0  Detroit  200
+86   2025-08-01 06:47:56   -83.0458    42.3314  ...          0  Detroit  200
+26   2025-08-01 04:47:57   -83.0458    42.3314  ...          0  Detroit  200
+77   2025-08-01 06:28:19   -83.0458    42.3314  ...          0  Detroit  200
+22   2025-08-01 04:33:24   -83.0458    42.3314  ...          0  Detroit  200
+88   2025-08-01 06:48:19   -83.0458    42.3314  ...          0  Detroit  200
+38   2025-08-01 05:08:33   -83.0458    42.3314  ...          0  Detroit  200
+164  2025-08-03 02:28:39   -83.0458    42.3314  ...          0  Detroit  200
+176  2025-08-03 05:23:50   -83.0458    42.3314  ...          0  Detroit  200
+98   2025-08-01 07:14:03   -83.0458    42.3314  ...          0  Detroit  200
+120  2025-08-02 04:11:00   -83.0458    42.3314  ...          0  Detroit  200
+111  2025-08-02 01:56:32   -83.0458    42.3314  ...          0  Detroit  200
+145  2025-08-02 20:52:32   -83.0458    42.3314  ...          0  Detroit  200
+128  2025-08-02 06:12:51   -83.0458    42.3314  ...          0  Detroit  200
+129  2025-08-02 06:27:21   -83.0458    42.3314  ...          0  Detroit  200
+55   2025-08-01 05:38:30   -83.0458    42.3314  ...          0  Detroit  200
+91   2025-08-01 06:56:45   -83.0458    42.3314  ...          0  Detroit  200
+27   2025-08-01 04:47:57   -83.0458    42.3314  ...          0  Detroit  200
+
+[30 rows x 15 columns]
 </pre>
 </div>
 </div>
-</div>
 
-<div id="outline-container-org70c60b6" class="outline-3">
-<h3 id="org70c60b6">6.2 Gráfica: Temperatura vs Tiempo</h3>
-<div class="outline-text-3" id="text-org70c60b6">
+<div id="outline-container-orge425c6f" class="outline-3">
+<h3 id="orge425c6f">6.2 Gráfica: Temperatura vs Tiempo</h3>
+<div class="outline-text-3" id="text-orge425c6f">
 
-<div id="org425bc80" class="figure">
+<div id="org61788ee" class="figure">
 <p><img src="./images/temperature.png" alt="temperature.png" />
 </p>
 <p><span class="figure-number">Figure 1: </span>Temperatura vs Tiempo</p>
@@ -452,11 +481,11 @@ El redireccionamiento de salida `&gt;&gt; output.log 2&gt;&amp;1` es crucial:
 </div>
 </div>
 
-<div id="outline-container-orgc4b3374" class="outline-3">
-<h3 id="orgc4b3374">6.3 Gráfica: Humedad vs Tiempo</h3>
-<div class="outline-text-3" id="text-orgc4b3374">
+<div id="outline-container-org523e5b6" class="outline-3">
+<h3 id="org523e5b6">6.3 Gráfica: Humedad vs Tiempo</h3>
+<div class="outline-text-3" id="text-org523e5b6">
 
-<div id="org0ebec9a" class="figure">
+<div id="org911e4b8" class="figure">
 <p><img src="./images/humidity.png" alt="humidity.png" />
 </p>
 <p><span class="figure-number">Figure 2: </span>Humedad vs Tiempo</p>
@@ -464,11 +493,11 @@ El redireccionamiento de salida `&gt;&gt; output.log 2&gt;&amp;1` es crucial:
 </div>
 </div>
 
-<div id="outline-container-orgc928716" class="outline-3">
-<h3 id="orgc928716">6.4 Grafica Frecuencia Descripción Clima</h3>
-<div class="outline-text-3" id="text-orgc928716">
+<div id="outline-container-org29ef097" class="outline-3">
+<h3 id="org29ef097">6.4 Grafica Frecuencia Descripción Clima</h3>
+<div class="outline-text-3" id="text-org29ef097">
 
-<div id="org4f8cc46" class="figure">
+<div id="org950365f" class="figure">
 <p><img src="./images/optional_plot.png" alt="optional_plot.png" />
 </p>
 <p><span class="figure-number">Figure 3: </span>Frecuencia Descripción Clima</p>
@@ -477,9 +506,9 @@ El redireccionamiento de salida `&gt;&gt; output.log 2&gt;&amp;1` es crucial:
 </div>
 </div>
 
-<div id="outline-container-orgf4040c7" class="outline-2">
-<h2 id="orgf4040c7">7. Conclusiones</h2>
-<div class="outline-text-2" id="text-orgf4040c7">
+<div id="outline-container-org9c57d9d" class="outline-2">
+<h2 id="org9c57d9d">7. Conclusiones</h2>
+<div class="outline-text-2" id="text-org9c57d9d">
 <p>
 El desarrollo de este proyecto permitió aplicar diversos conocimientos de programación, automatización y publicación web en un entorno real y práctico. A continuación, se detallan algunas conclusiones relevantes:
 </p>
@@ -495,9 +524,9 @@ El desarrollo de este proyecto permitió aplicar diversos conocimientos de progr
 </div>
 
 
-<div id="outline-container-orgfba23c4" class="outline-2">
-<h2 id="orgfba23c4">8. Referencias</h2>
-<div class="outline-text-2" id="text-orgfba23c4">
+<div id="outline-container-org7726736" class="outline-2">
+<h2 id="org7726736">8. Referencias</h2>
+<div class="outline-text-2" id="text-org7726736">
 <ul class="org-ul">
 <li><a href="https://openweathermap.org/api">Documentación oficial OpenWeather</a></li>
 <li><a href="https://realpython.com/python-requests/">Uso de requests en Python</a></li>
@@ -509,11 +538,20 @@ El desarrollo de este proyecto permitió aplicar diversos conocimientos de progr
 </div>
 </div>
 
-<div id="outline-container-org8461c6e" class="outline-2">
-<h2 id="org8461c6e">Créditos y Licencia</h2>
-<div class="outline-text-2" id="text-org8461c6e">
+<div id="outline-container-orged9e762" class="outline-2">
+<h2 id="orged9e762">Créditos y Licencia</h2>
+<div class="outline-text-2" id="text-orged9e762">
 <p>
 Desarrollado por los futuros ingenieros Andres Alban y Andy Cabrera del curso de Arquitectura de computadoras en la facultad de Sistemas de la Escula politecnica nacional 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc536ce6" class="outline-2">
+<h2 id="orgc536ce6">GITHUB DEL PROYECTO</h2>
+<div class="outline-text-2" id="text-orgc536ce6">
+<p>
+<a href="https://github.com/Andyalexiss/Proyecto_Fin_Bimestre_Arquitectura.git">Repositorio Del Proyecto</a>
 </p>
 </div>
 </div>
@@ -521,7 +559,7 @@ Desarrollado por los futuros ingenieros Andres Alban y Andy Cabrera del curso de
 <div id="postamble" class="status">
 <p class="date">Date: 2025-08-04</p>
 <p class="author">Author: Andres Alban y Andy Cabrera</p>
-<p class="date">Created: 2025-08-03 Sun 09:14</p>
+<p class="date">Created: 2025-08-03 Sun 14:39</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
